@@ -1,4 +1,4 @@
-function addPlayer (name, gender) {
+function addPlayer () {
 	
 	console.log("a");
 }

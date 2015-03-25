@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 
-});
+
 
 function showAddPlayerForm() {
 	var playersList = $("#playersList");
@@ -11,3 +11,5 @@ function showAddPlayerForm() {
 function hideAddPlayerForm() {
 	$("#addPlayerForm").hide();
 }
+
+});
