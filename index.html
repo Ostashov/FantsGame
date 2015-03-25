@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Фанты</title>
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="js/model.js"></script>
+        <script src="js/view.js"></script>
+        <script src="js/controller.js"></script>
+    </head>
+    <body>
+        <h1>Фанты</h1>
+        <h2>Игроки:</h2>
+        <div id="playersList">
+            <div class="player">
+                Игрок 1
+                <input class="delButton" value="-" type="button" />
+            </div>
+            <div class="player">
+                Игрок 2
+                <input class="delButton" value="-" type="button" />
+            </div>
+            <div class="player">
+                Игрок 3
+                <input class="delButton" value="-" type="button" />
+            </div>
+        </div>
+        <div id='addPlayerForm' hidden>
+            <input id='addPlayerName' type='text' name="name" /><br/>
+            <input type="radio" name="gender" value="male" /> М <input type="radio" name="gender" value="female" /> Ж <br/>
+            <input value="OK" id='addPlayerButtonOK' type="button">
+        </div>
+        <input value="+" id="addButton" type="button" />
+        <button>Удалить всех игроков</button>
+        </br>
+        <button>Начать игру</button>
+    </body>
+</html>
