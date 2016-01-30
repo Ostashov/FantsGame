@@ -1,4 +1,3 @@
-function addPlayer () {
-	
-	console.log("a");
-}
+Query(document).ready(function(){
+
+});
