@@ -16,6 +16,19 @@
         <div id="gamers">
             <div class="header1">Игроки:</div>
             <div class="content">Нет игроков</div>
+            <form name="addPlayer" method="post" action="">
+                <p>Введите имя:
+                    <input name="playerName" type="text"></input>
+                </p>
+                <p>Выберите пол:
+                    <input name="playerGender" type="radio" value="man">Парень</input>
+                    <input name="playerGender" type="radio" value="female">Девушка</input>
+                </p>
+                <p>
+                    <input type="submit" value="Добавить">
+                    <input type="reset" value="Очистить">
+                </p>
+            </form>
         </div>
     </body>
 </html>
