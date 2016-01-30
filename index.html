@@ -13,31 +13,9 @@
     </head>
     <body>
         <h1>Фанты</h1>
-        <h2>Игроки:</h2>
-        <div id="playersList">
-            <div class="player">
-                Игрок 1
-                <input class="delButton" value="-" type="button" />
-            </div>
-            <div class="player">
-                Игрок 2
-                <input class="delButton" value="-" type="button" />
-            </div>
-            <div class="player">
-                Игрок 3
-                <input class="delButton" value="-" type="button" />
-            </div>
+        <div id="gamers">
+            <div class="header1">Игроки:</div>
+            <div class="content">Нет игроков</div>
         </div>
-        <div id='addPlayerForm' hidden>
-            <form action="javascript:void(0);" onsumbit="addPlayer()" method="POST">
-                <input id='addPlayerName' type='text' name="name" /><br/>
-                <input type="radio" name="gender" value="male" /> М <input type="radio" name="gender" value="female" /> Ж <br/>
-                <input type="sumbit" id='addPlayerButtonOK' value="OK">
-            </form>
-        </div>
-        <input value="+" id="addButton" type="button" />
-        <button>Удалить всех игроков</button>
-        </br>
-        <button>Начать игру</button>
     </body>
 </html>
