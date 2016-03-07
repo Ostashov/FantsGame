@@ -11,5 +11,12 @@ function addPlayerIntoDB(){
 }
 
 function showAllPlayers(){
-	
+	$.ajax({
+		url: "showAllPlayers.php",
+		type: "POST",
+		//data: "*",
+		success: function(data) {
+			showListOfPlayers(data);
+		}
+	});
 }

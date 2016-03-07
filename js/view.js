@@ -1,3 +1,4 @@
-jQuery(document).ready(function(){
-
-});
+function showListOfPlayers(data){
+	$("#listOfPlayers").html('');
+	$("#listOfPlayers").html(data);
+}

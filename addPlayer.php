@@ -6,4 +6,6 @@ $playerGender = $_REQUEST['playerGender'];
 
 $sql= "INSERT INTO players(name, gender) VALUES ('$playerName', '$playerGender') ";
 $r=mysql_query ($sql);
+
+
 ?>
