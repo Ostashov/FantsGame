@@ -3,10 +3,11 @@ jQuery(document).ready(function(){
 
 	$("#addPlayerButton").click(function() {
 		addPlayerIntoDB();
-		$(':input','#addPlayerForm')
-		 .not(':button, :submit, :reset, :hidden')
-		 .val('')
-		 .removeAttr('checked')
-		 .removeAttr('selected');
+		showAllPlayers();
+	});
+
+	$('#showAddPlayerFormBtn').click(function() {
+		$('#addPlayerForm').show();
+		$('#showAddPlayerFormBtn').hide();
 	});
 });
