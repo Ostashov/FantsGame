@@ -6,8 +6,8 @@ include("include/db.php");
 
 echo "<table class='tableOfPlayers' >
 <tr>
-<td align=center>Name</td>
-<td align=center>Gender</td>";
+<th align=center>Name</th>
+<th align=center>Gender</th>";
 
 //while($data = mysql_fetch_row($result))
 //$result->data_seek(0);

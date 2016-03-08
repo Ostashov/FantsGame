@@ -1,3 +1,13 @@
 body {
     font-family: sans-serif;
 }
+
+.tableOfPlayers {
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+    td, th {
+        padding: 5px;
+        border: 1px solid #000;
+    }
