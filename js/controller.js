@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
 		$('#showAddPlayerFormBtn').show();
 	});
 
-	$('.delPlayerBtn').on('click', function() {
-		alert('a');
+	$('#listOfPlayers').on('click','.delPlayerBtn', function(){
+		alert('TODO написать удаление игроков');
 	});
 });
