@@ -17,20 +17,23 @@
             <div class="header1">Игроки:</div>
             <div id="listOfPlayers" class="content">Нет игроков</div>
             <button id="showAddPlayerFormBtn">Добавить игрока</button>
-            <form id="addPlayerForm" name="addPlayer" method="post" hidden>
-                <p>Введите имя:
-                    <input id="playerNameInput" name="playerName" type="text"></input>
-                </p>
-                <p>Выберите пол:
-                    <input class="playerGenderInput" name="playerGender" type="radio" value="man">Парень</input>
-                    <input class="playerGenderInput" name="playerGender" type="radio" value="female">Девушка</input>
-                </p>
-                <p>
-                    <input id="addPlayerButton" type="button" value="Добавить">
-                    <input type="reset" value="Очистить">
-                </p>
-                <p id="addPlayerResult"></p>
-            </form>
+            <div id="addPlayerBlock" hidden>
+                <button id="hideAddPlayerFormBtn">Свернуть</button>
+                <form id="addPlayerForm" name="addPlayer" method="post">
+                    <p>Введите имя:
+                        <input id="playerNameInput" name="playerName" type="text"></input>
+                    </p>
+                    <p>Выберите пол:
+                        <input class="playerGenderInput" name="playerGender" type="radio" value="man">Парень</input>
+                        <input class="playerGenderInput" name="playerGender" type="radio" value="female">Девушка</input>
+                    </p>
+                    <p>
+                        <input id="addPlayerButton" type="button" value="Добавить">
+                        <input type="reset" value="Очистить">
+                    </p>
+                    <p id="addPlayerResult"></p>
+                </form>
+            </div>
         </div>
         <div class="content">
             <button id="startPlayBtn">Начать игру!</button>

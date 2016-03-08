@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
 	});
 
 	$('#showAddPlayerFormBtn').click(function() {
-		$('#addPlayerForm').show();
+		$('#addPlayerBlock').show();
 		$('#showAddPlayerFormBtn').hide();
 	});
 });
