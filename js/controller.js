@@ -10,4 +10,10 @@ jQuery(document).ready(function(){
 		$('#addPlayerBlock').show();
 		$('#showAddPlayerFormBtn').hide();
 	});
+
+	$('#hideAddPlayerFormBtn').click(function() {
+		$('#addPlayerBlock').hide();
+		$('#showAddPlayerFormBtn').show();
+
+	});
 });
