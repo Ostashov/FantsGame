@@ -16,6 +16,9 @@ jQuery(document).ready(function(){
 	$('#hideAddPlayerFormBtn').click(function() {
 		$('#addPlayerBlock').hide();
 		$('#showAddPlayerFormBtn').show();
+	});
 
+	$('.delPlayerBtn').on('click', function() {
+		alert('a');
 	});
 });

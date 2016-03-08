@@ -19,7 +19,8 @@ if (count($stmt->fetch()) != 0) {
         echo "<tr id='player".$row['id']."'>";
         echo "<td align=center>".$row['name']."</td>";
         echo "<td align=center>".$row['gender']."</td>";
-        echo "<td><button id='delPlayer".$row['id']."Btn' value='".$row['id']."'>x</button></td>";
+        echo "<td><input value='".$row['id']."' hidden >";
+        echo "<button type='button' class='delPlayerBtn' name='delPlayerBtn'>x</button></td>";
         echo "</tr>";
     }
     echo "</table>";
