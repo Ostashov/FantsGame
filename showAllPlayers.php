@@ -8,7 +8,7 @@ if (count($stmt->fetch()) != 0) {
     echo "<table class='tableOfPlayers' >
     <tr>
     <th align=center>Имя</th>
-    <th align=center>Пол</th>";
+    <th align=center>Пол</th></tr>";
 
     //while($data = mysql_fetch_row($result))
     //$result->data_seek(0);
@@ -19,7 +19,7 @@ if (count($stmt->fetch()) != 0) {
         echo "<tr id='player".$row['id']."'>";
         echo "<td align=center>".$row['name']."</td>";
         echo "<td align=center>".$row['gender']."</td>";
-        echo "<td><input value='".$row['id']."' hidden >";
+        echo "<td class='leftBorder'><input value='".$row['id']."' hidden >";
         echo "<button type='button' class='delPlayerBtn' name='delPlayerBtn'>x</button></td>";
         echo "</tr>";
     }

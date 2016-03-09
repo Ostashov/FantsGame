@@ -4,10 +4,13 @@ body {
 
 .tableOfPlayers {
     border-collapse: collapse;
-    border: 1px solid #000;
 }
 
-    td, th {
+    #listOfPlayers td, #listOfPlayers th {
         padding: 5px;
         border: 1px solid #000;
+    }
+
+    #listOfPlayers .leftBorder {
+        border: none;
     }
