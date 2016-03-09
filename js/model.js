@@ -30,3 +30,14 @@ function showAllPlayers(){
 		}
 	});
 }
+
+function deletePlayer(id) {
+	$.ajax({
+			url: "deletePlayer.php",
+			type: "POST",
+			data: "id="+id,
+			success: function(data) {
+				showAllPlayers();
+			}
+	});
+}
