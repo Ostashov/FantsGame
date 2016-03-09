@@ -20,7 +20,7 @@ if (count($stmt->fetch()) != 0) {
         echo "<tr id='player".$row['id']."'>";
         echo "<td align=center>".$row['name']."</td>";
         echo "<td align=center>".$row['gender']."</td>";
-        echo "<td class='leftBorder delButtons' >";
+        echo "<td class='leftBorder delButtons' hidden >";
         echo "<button type='button' class='delPlayerBtn' value='".$row['id']."'>x</button></td>";
         echo "</tr>";
     }

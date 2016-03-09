@@ -22,13 +22,13 @@ jQuery(document).ready(function(){
 	});
 
 	$('#listOfPlayers').on('click','#showDelPlayerButtonsBtn', function(){
-		$('.delButtons').hide();
+		$('.delButtons').show();
 		$(this).attr("id", "hideDelPlayerButtonsBtn");
 		$(this).html('Свернуть');
 	});
 
 	$('#listOfPlayers').on('click','#hideDelPlayerButtonsBtn', function(){
-		$('.delButtons').show();
+		$('.delButtons').hide();
 		$(this).attr("id", "showDelPlayerButtonsBtn");
 		$(this).html('Изменить');
 	});
