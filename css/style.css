@@ -2,6 +2,10 @@ body {
     font-family: sans-serif;
 }
 
+button {
+    cursor: pointer!important;
+}
+
 .tableOfPlayers {
     border-collapse: collapse;
 }
