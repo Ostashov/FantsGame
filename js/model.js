@@ -15,6 +15,10 @@ function addPlayerIntoDB(){
 		.val('')
 		.removeAttr('checked')
 		.removeAttr('selected');
+
+		
+		$('#addPlayerBlock').hide();
+		$('#showAddPlayerFormBtn').show();
 	} else {
 		$("#addPlayerResult").html("Заполните все формы");
 	}

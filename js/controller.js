@@ -4,8 +4,6 @@ jQuery(document).ready(function(){
 	$("#addPlayerButton").click(function() {
 		addPlayerIntoDB();
 		showAllPlayers();
-		$('#addPlayerBlock').hide();
-		$('#showAddPlayerFormBtn').show();
 	});
 
 	$('#showAddPlayerFormBtn').click(function() {
