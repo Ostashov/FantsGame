@@ -21,4 +21,16 @@ jQuery(document).ready(function(){
 	$('#listOfPlayers').on('click','.delPlayerBtn', function(){
 		alert('TODO написать удаление игроков');
 	});
+
+	$('#listOfPlayers').on('click','#showDelPlayerButtonsBtn', function(){
+		$('.delButtons').hide();
+		$(this).attr("id", "hideDelPlayerButtonsBtn");
+		$(this).html('Свернуть');
+	});
+
+	$('#listOfPlayers').on('click','#hideDelPlayerButtonsBtn', function(){
+		$('.delButtons').show();
+		$(this).attr("id", "showDelPlayerButtonsBtn");
+		$(this).html('Изменить');
+	});
 });
