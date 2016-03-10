@@ -35,4 +35,8 @@ jQuery(document).ready(function(){
 		$(this).attr("id", "showDelPlayerButtonsBtn");
 		$(this).html('Изменить');
 	});
+
+	$('#adminSignInBtn').on('click', function() {
+		signIn();
+	});
 });

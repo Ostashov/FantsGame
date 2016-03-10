@@ -46,3 +46,7 @@ function deletePlayer(id) {
 			}
 	});
 }
+
+function signIn() {
+	alert($('#adminLogin').val() != 0 & $('#adminPassword').val() != 0);
+}
