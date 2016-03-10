@@ -16,6 +16,7 @@ jQuery(document).ready(function(){
 		$('#addPlayerBlock').hide();
 		$(this).attr("id", "showAddPlayerFormBtn");
 		$(this).html('Добавить игрока');
+		$("#addPlayerResult").html("");
 	});
 
 	$('#listOfPlayers').on('click','.delPlayerBtn', function(){
