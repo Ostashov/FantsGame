@@ -35,6 +35,10 @@ body {
         background-color:#e0e0e0;
     }
 
+.form-group {
+    margin-bottom: 10px;
+}
+
 .tableOfPlayers {
     border-collapse: collapse;
 }
