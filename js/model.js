@@ -17,8 +17,9 @@ function addPlayerIntoDB(){
 		.removeAttr('selected');
 
 		
-		$('#addPlayerBlock').hide();
-		$('#showAddPlayerFormBtn').show();
+		//$('#addPlayerBlock').hide();
+		//$('#hideAddPlayerFormBtn').html('Добавить игрока');
+		//$('#hideAddPlayerFormBtn').attr("id", "showAddPlayerFormBtn");
 	} else {
 		$("#addPlayerResult").html("Заполните все формы");
 	}

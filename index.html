@@ -12,31 +12,32 @@
         <script src="js/controller.js"></script>
     </head>
     <body>
-        <h1>Фанты</h1>
-        <div id="gamers">
-            <div class="header1">Игроки:</div>
-            <div id="listOfPlayers" class="content"></div>
-            <button id="showAddPlayerFormBtn">Добавить игрока</button>
-            <div id="addPlayerBlock" hidden>
-                <button id="hideAddPlayerFormBtn">Свернуть</button>
-                <form id="addPlayerForm" name="addPlayer" method="post">
-                    <p>Введите имя:
-                        <input id="playerNameInput" name="playerName" type="text"></input>
-                    </p>
-                    <p>Выберите пол:
-                        <input class="playerGenderInput" name="playerGender" type="radio" value="man">Парень</input>
-                        <input class="playerGenderInput" name="playerGender" type="radio" value="female">Девушка</input>
-                    </p>
-                    <p>
-                        <input id="addPlayerButton" type="button" value="Добавить">
-                        <input type="reset" value="Очистить">
-                    </p>
-                    <p id="addPlayerResult"></p>
-                </form>
+        <div class="wrapper">
+            <h1>Фанты</h1>
+            <div id="gamers">
+                <div class="header1">Игроки:</div>
+                <div id="listOfPlayers"></div>
+                <button id="showAddPlayerFormBtn">Добавить игрока</button>
+                <div id="addPlayerBlock" hidden>
+                    <form id="addPlayerForm" name="addPlayer" method="post">
+                        <p>Введите имя:
+                            <input id="playerNameInput" name="playerName" type="text"></input>
+                        </p>
+                        <p>Выберите пол:
+                            <input class="playerGenderInput" name="playerGender" type="radio" value="man">Парень</input>
+                            <input class="playerGenderInput" name="playerGender" type="radio" value="female">Девушка</input>
+                        </p>
+                        <p>
+                            <input id="addPlayerButton" type="button" value="Добавить">
+                            <input type="reset" value="Очистить">
+                        </p>
+                        <p id="addPlayerResult"></p>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="content">
-            <button id="startPlayBtn">Начать игру!</button>
+            <div class="content">
+                <button id="startPlayBtn">Начать игру!</button>
+            </div>
         </div>
     </body>
 </html>

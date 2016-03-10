@@ -1,19 +1,21 @@
 jQuery(document).ready(function(){
 	showAllPlayers();
 
-	$("#addPlayerButton").click(function() {
+	$('#gamers').on('click', '#addPlayerButton', function() {
 		addPlayerIntoDB();
 		showAllPlayers();
 	});
 
-	$('#showAddPlayerFormBtn').click(function() {
+	$('#gamers').on('click', '#showAddPlayerFormBtn', function() {
 		$('#addPlayerBlock').show();
-		$('#showAddPlayerFormBtn').hide();
+		$(this).attr("id", "hideAddPlayerFormBtn");
+		$(this).html('Свернуть');
 	});
 
-	$('#hideAddPlayerFormBtn').click(function() {
+	$('#gamers').on('click', '#hideAddPlayerFormBtn', function() {
 		$('#addPlayerBlock').hide();
-		$('#showAddPlayerFormBtn').show();
+		$(this).attr("id", "showAddPlayerFormBtn");
+		$(this).html('Добавить игрока');
 	});
 
 	$('#listOfPlayers').on('click','.delPlayerBtn', function(){
