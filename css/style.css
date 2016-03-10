@@ -2,32 +2,38 @@ body {
     font-family: sans-serif;
 }
 
-button, input[type='button'], input[type='reset'] {
+.btn {
     cursor: pointer!important;
     -moz-box-shadow: 0px 2px 5px -3px #000000;
     -webkit-box-shadow: 0px 2px 5px -3px #000000;
     box-shadow: 0px 2px 5px -3px #000000;
-    background-color:#f0f0f0;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
-    border-radius:5px;
-    border:1px solid #000000;
+    border-radius:3px;
     display:inline-block;
-    color:#000000;
-    
-    padding:10px 10px;
+    padding: 5px 5px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #ffffff;
 }
 
-button:hover, input[type='button']:hover, input[type='reset']:hover {
-    background-color:#e0e0e0;
+.btn:focus {
+    outline: none;
 }
 
-button:active, input[type='button']:active, input[type='reset']:active {
-    position:relative;
-    top:1px;
+.btn:active {
+    position: relative;
+    top: 1px;
 }
+
+    .btn-default {
+        background-color:#f0f0f0;
+        border:1px solid #000000;
+        color:#000000;
+        text-shadow:0px 1px 0px #ffffff;
+    }
+
+    .btn-default:hover {
+        background-color:#e0e0e0;
+    }
 
 .tableOfPlayers {
     border-collapse: collapse;
