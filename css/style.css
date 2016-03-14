@@ -58,3 +58,10 @@
     margin-top: -5px;
     margin-bottom: -2px;
 }
+
+.col-md-3,
+.col-md-6 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+}
