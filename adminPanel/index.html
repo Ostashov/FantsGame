@@ -19,23 +19,29 @@
     </head>
     <body>
         <div class="container">
-            <h1>Фанты</h1>
-            <a href="/" class="btn btn-default">Назад</a>
-            <h2>Панель управления</h2>
-            <div class="col-md-2">
-            <form action="" id="adminSignInForm">
-                <div class="form-group">
-                    <label for="adminLogin">Логин:</label>
-                    <input type="text" id="adminLogin" class="form-control" name="adminLogin" placeholder="Логин">
-                    <span id="adminLoginMessage" class="help-block"></span>
+            <div class="row">
+                <h1>Фанты</h1>
+                <a href="/" class="btn btn-default">Назад</a>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Панель управления</h2>
+                    <div class="col-md-2">
+                    <form action="" id="adminSignInForm">
+                        <div class="form-group">
+                            <label for="adminLogin">Логин:</label>
+                            <input type="text" id="adminLogin" class="form-control" name="adminLogin" placeholder="Логин">
+                            <span id="adminLoginMessage" class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminPassword">Пароль:</label>
+                            <input type="password" id="adminPassword" class="form-control" name="adminPassword" placeholder="Пароль">
+                            <span id="adminPasswordMessage" class="help-block"></span>
+                        </div>
+                        <input type="button" id="adminSignInBtn" class="btn btn-default" value="Войти" >
+                    </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="adminPassword">Пароль:</label>
-                    <input type="password" id="adminPassword" class="form-control" name="adminPassword" placeholder="Пароль">
-                    <span id="adminPasswordMessage" class="help-block"></span>
-                </div>
-                <input type="button" id="adminSignInBtn" class="btn btn-default" value="Войти" >
-            </form>
             </div>
         </div>
     </body>

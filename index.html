@@ -19,31 +19,38 @@
     </head>
     <body>
         <div class="container">
-            <h1>Фанты</h1>
-            <a class="btn btn-default btn-sm" href="/adminpanel">Панель управления</a>
-            <div id="gamers">
-                <div class="header1">Игроки:</div>
-                <div class="col-md-3" id="listOfPlayers"></div>
-                <button id="showAddPlayerFormBtn" class="btn btn-default">Добавить игрока</button>
-                <div id="addPlayerBlock" hidden>
-                    <form id="addPlayerForm" name="addPlayer" method="post">
-                        <div class="form-group">
-                            <label for="playerNameInput">Имя:</label>
-                            <input id="playerNameInput" name="playerName" type="text"></input>
-                        </div>
-                        <div class="form-group">
-                            <label for="playerGender">Пол:</label>
-                            <input class="playerGenderInput" name="playerGender" type="radio" value="man">Парень</input>
-                            <input class="playerGenderInput" name="playerGender" type="radio" value="female">Девушка</input>
-                        </div>
-                        <input id="addPlayerButton" type="button" class="btn btn-success" value="Добавить">
-                        <input type="reset" class="btn btn-default" value="Очистить">
-                        <div id="addPlayerResult"></div>
-                    </form>
-                </div>
+            <div class="row">
+                <h1>Фанты</h1>
+                <a class="btn btn-default btn-sm" href="/adminpanel">Панель управления</a>
             </div>
-            <div class="content">
-                <button id="startPlayBtn" class="btn btn-primary">Начать игру!</button>
+            <div class="row">
+                <div class="col-md-3" id="gamers">
+                    <h4>Игроки:</h4>
+                    <div id="listOfPlayers"></div>
+                    <button id="showAddPlayerFormBtn" class="btn btn-default">Добавить игрока</button>
+                    <div id="addPlayerBlock" hidden>
+                        <form id="addPlayerForm" name="addPlayer" method="post">
+                            <div class="form-group">
+                                <label for="playerNameInput">Имя:</label>
+                                <input id="playerNameInput" name="playerName" type="text"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="playerGender">Пол:</label>
+                                <input class="playerGenderInput" name="playerGender" type="radio" value="man">Парень</input>
+                                <input class="playerGenderInput" name="playerGender" type="radio" value="female">Девушка</input>
+                            </div>
+                            <input id="addPlayerButton" type="button" class="btn btn-success" value="Добавить">
+                            <input type="reset" class="btn btn-default" value="Очистить">
+                            <div id="addPlayerResult"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 content">
+                    <button id="startPlayBtn" class="btn btn-primary">Начать игру!</button>
+                </div>
+                <div class="col-md-3">
+                    <h4>Информационный блок</h4>
+                </div>
             </div>
         </div>
     </body>
