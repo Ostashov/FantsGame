@@ -21,7 +21,7 @@ if (count($stmt->fetch()) != 0) {
         echo "<td align=center>".$row['name']."</td>";
         echo "<td align=center>".$row['gender']."</td>";
         echo "<td class='leftBorder delButtons' hidden >";
-        echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['id']."'>x</button></td>";
+        echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['id']."'>&times;</button></td>";
         echo "</tr>";
     }
     echo "</table>";
