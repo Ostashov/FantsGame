@@ -3,8 +3,12 @@ include("include/db.php");
 
 //$result=mysql_query("select * from players",$connect);
 //$result = $mysqli->query("SELECT id FROM test ORDER BY id ASC");
-$stmt = $pdo->query('SELECT * FROM players');
-if (count($stmt->fetch()) != 0) {
+$stmt = $pdo->query('SELECT COUNT(0) AS ROW_COUNT FROM players');
+$number = $stmt->fetch(PDO::FETCH_NUM);
+
+if ($number[0] != 0) {
+    $stmt = $pdo->query('SELECT * FROM players');
+
     echo "<table class='table table-striped table-condensed' >
     <tr>
     <th align=center>Имя</th>
@@ -16,11 +20,11 @@ if (count($stmt->fetch()) != 0) {
 
     while ($row = $stmt->fetch()) {
     //}
-    //while ($data = $result->fetch_assoc()) {   
+    //while ($data = $result->fetch_assoc()) {  
         echo "<tr id='player".$row['id']."'>";
         echo "<td align=center>".$row['name']."</td>";
         echo "<td align=center>".$row['gender']."</td>";
-        echo "<td class='leftBorder delButtons' hidden >";
+        echo "<td class='delButtons' hidden >";
         echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['id']."'>&times;</button></td>";
         echo "</tr>";
     }
