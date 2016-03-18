@@ -58,3 +58,9 @@
     margin-top: -5px;
     margin-bottom: -2px;
 }
+
+#showDelPlayerButtonsBtn,
+#hideDelPlayerButtonsBtn {
+    margin: 0px;
+    padding: 0px;
+}
