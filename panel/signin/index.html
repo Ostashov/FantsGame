@@ -16,7 +16,6 @@
         <script src="js/model.js"></script>
         <script src="js/view.js"></script>
         <script src="js/controller.js"></script>
-
     </head>
     <body>
         <header class="navbar navbar-static-top bs-docs-nav" role="banner">
@@ -39,32 +38,26 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Регистрация</h3>
+                            <h3 class="panel-title">Вход</h3>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-3">
-                                <form action="" id="userRegisterForm">
-                                    <div class="form-group" id="userLoginForm">
-                                        <label for="userLogin">Логин:</label>
-                                        <input type="text" id="userLogin" class="form-control" name="userLogin" placeholder="Логин">
-                                        <span id="userLoginMessage" class="help-block"></span>
+                            <div class="col-md-2">
+                                <form action="" id="adminSignInForm">
+                                    <div class="form-group">
+                                        <label for="adminLogin">Логин:</label>
+                                        <input type="text" id="adminLogin" class="form-control" name="adminLogin" placeholder="Логин">
+                                        <span id="adminLoginMessage" class="help-block"></span>
                                     </div>
-                                    <div class="form-group" id="userPasswordForm">
-                                        <label for="userPassword">Пароль:</label>
-                                        <input type="password" id="userPassword" class="form-control" name="userPassword" placeholder="Пароль">
-                                        <span id="userPasswordMessage" class="help-block"></span>
+                                    <div class="form-group">
+                                        <label for="adminPassword">Пароль:</label>
+                                        <input type="password" id="adminPassword" class="form-control" name="adminPassword" placeholder="Пароль">
+                                        <span id="adminPasswordMessage" class="help-block"></span>
                                     </div>
-                                    <div class="form-group" id="userEmailForm" >
-                                        <label for="userEmail">E-mail:</label>
-                                        <input type="email" id="userEmail" class="form-control" name="userEmail" placeholder="E-mail">
-                                        <span id="userEmailMessage" class="help-block"></span>
-                                    </div>
-                                    <input type="button" id="userRegisterNextBtn" class="btn btn-primary" value="Дальше">
-                                    <input type="button" id="userRegisterBtn" class="btn btn-primary" value="Зарегистрироваться" >
+                                    <input type="button" id="adminSignInBtn" class="btn btn-primary" value="Войти" >
                                 </form>
                             </div>
                             <div class="col-md-4">
-                                <p><a href="/adminpanel/signin">Вход</a></p>
+                                <p><a href="/panel/register">Регистрация</a></p>
                             </div>
                         </div>
                     </div>
