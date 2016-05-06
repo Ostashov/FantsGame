@@ -21,11 +21,11 @@ if ($number[0] != 0) {
     while ($row = $stmt->fetch()) {
     //}
     //while ($data = $result->fetch_assoc()) {  
-        echo "<tr id='player".$row['id']."'>";
-        echo "<td align=center>".$row['name']."</td>";
-        echo "<td align=center>".$row['gender']."</td>";
+        echo "<tr id='player".$row['player_id']."'>";
+        echo "<td align=center>".$row['player_name']."</td>";
+        echo "<td align=center>".$row['player_gender']."</td>";
         echo "<td class='delButtons' hidden >";
-        echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['id']."'>&times;</button></td>";
+        echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['player_id']."'>&times;</button></td>";
         echo "</tr>";
     }
     echo "</table>";
