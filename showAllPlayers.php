@@ -13,6 +13,7 @@ if ($number[0] != 0) {
     <tr>
     <th align=center>Имя</th>
     <th align=center>Пол</th>
+    <th align=center>Очки</th>
     <th class='leftBorder'><button type='button' id='showDelPlayerButtonsBtn' class='btn btn-link' name='delPlayerBtn'>Изменить</button></th></tr>";
 
     //while($data = mysql_fetch_row($result))
@@ -24,6 +25,7 @@ if ($number[0] != 0) {
         echo "<tr id='player".$row['player_id']."'>";
         echo "<td align=center>".$row['player_name']."</td>";
         echo "<td align=center>".$row['player_gender']."</td>";
+        echo "<td align=center>".$row['player_points']."</td>";
         echo "<td class='delButtons' hidden >";
         echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['player_id']."'>&times;</button></td>";
         echo "</tr>";
