@@ -5,6 +5,7 @@ jQuery(document).ready(function(){
     $("#userRegisterForm").on("click", "#userRegisterNextBtn", function() {
         var login = $('#userLogin').val();
         var password = $('#userPassword').val();
+        var password2 = $('#userPassword2').val();
         
         if (!login) {
             printMessage($("#userLoginMessage"), "Введите логин");
@@ -18,12 +19,19 @@ jQuery(document).ready(function(){
             printMessage($("#userPasswordMessage"), "");
         }
 
-        if (login != '' & password != '') {
-            $("#userLoginForm").hide();
-            $("#userPasswordForm").hide();
-            $("#userRegisterNextBtn").hide();
-            $("#userEmailForm").show();
-            $("#userRegisterBtn").show();
+        if (!password2) {
+            printMessage($("#userPassword2Message"), "Введите пароль ещё раз");
+        } else if (password != password2) {
+            printMessage($("#userPassword2Message"), "Пароли не совпадают");
+        } else {
+            if (login != '' & password != '') {
+                $("#userLoginForm").hide();
+                $("#userPasswordForm").hide();
+                $("#userPassword2Form").hide();
+                $("#userRegisterNextBtn").hide();
+                $("#userEmailForm").show();
+                $("#userRegisterBtn").show();
+            }
         }
     });
 
