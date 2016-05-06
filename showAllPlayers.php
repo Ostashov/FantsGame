@@ -12,9 +12,9 @@ if ($number[0] != 0) {
     echo "<table class='table table-striped table-condensed' >
     <tr>
     <th align=center>Имя</th>
-    <th align=center>Пол</th>
     <th align=center>Очки</th>
-    <th class='leftBorder'><button type='button' id='showDelPlayerButtonsBtn' class='btn btn-link' name='delPlayerBtn'>Изменить</button></th></tr>";
+    <th align=center><button type='button' id='showDelPlayerButtonsBtn' class='btn btn-default btn-xs' name='delPlayerBtn'><i class='fa fa-cog' aria-hidden='true'></i>
+</button></th></tr>";
 
     //while($data = mysql_fetch_row($result))
     //$result->data_seek(0);
@@ -23,11 +23,10 @@ if ($number[0] != 0) {
     //}
     //while ($data = $result->fetch_assoc()) {  
         echo "<tr id='player".$row['player_id']."'>";
-        echo "<td align=center>".$row['player_name']."</td>";
-        echo "<td align=center>".$row['player_gender']."</td>";
+        echo "<td>".$row['player_name']."</td>";
         echo "<td align=center>".$row['player_points']."</td>";
         echo "<td class='delButtons' hidden >";
-        echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['player_id']."'>&times;</button></td>";
+        echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['player_id']."'><i class='fa fa-times' aria-hidden='true'></i></button></td>";
         echo "</tr>";
     }
     echo "</table>";

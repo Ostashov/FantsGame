@@ -27,12 +27,12 @@ jQuery(document).ready(function(){
 	$('#listOfPlayers').on('click','#showDelPlayerButtonsBtn', function(){
 		$('.delButtons').show();
 		$(this).attr("id", "hideDelPlayerButtonsBtn");
-		$(this).html('Свернуть');
+		//$(this).html('Свернуть');
 	});
 
 	$('#listOfPlayers').on('click','#hideDelPlayerButtonsBtn', function(){
 		$('.delButtons').hide();
 		$(this).attr("id", "showDelPlayerButtonsBtn");
-		$(this).html('Изменить');
+		$(this).html("<i class='fa fa-cog' aria-hidden='true'></i>");
 	});
 });
