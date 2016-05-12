@@ -23,7 +23,10 @@ if ($number[0] != 0) {
     //}
     //while ($data = $result->fetch_assoc()) {  
         echo "<tr id='player".$row['player_id']."'>";
-        echo "<td>".$row['player_name']."</td>";
+        echo "<td>".$row['player_name'];
+        if ($row['player_isMale']) echo " <i class='fa fa-mars' aria-hidden='true'></i>";
+        else echo " <i class='fa fa-venus' aria-hidden='true'></i>";
+        echo "</td>";
         echo "<td align=center>".$row['player_points']."</td>";
         echo "<td class='delButtons' hidden >";
         echo "<button type='button' class='btn btn-default btn-xs delPlayerBtn' value='".$row['player_id']."'><i class='fa fa-times' aria-hidden='true'></i></button></td>";
