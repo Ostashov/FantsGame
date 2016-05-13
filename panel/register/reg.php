@@ -2,7 +2,7 @@
 include("../../include/db.php");
 
 $user_email = $_POST['email'];
-$user_pass = md5($_POST['password']);
+$user_pass = md5(md5(trim($_POST['password'])));
 
 $stmt = $pdo->query('SELECT COUNT(0) AS ROW_COUNT FROM users WHERE user_email="'.$user_email.'" ');
 $number = $stmt->fetch(PDO::FETCH_NUM);
