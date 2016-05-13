@@ -1,3 +1,3 @@
-function register(userLogin, userPass, userEmail) {
-    alert(userLogin + " " + userPass + " " + userEmail);
+function register(userEmail, userPass) {
+    alert(userEmail + " " + userPass);
 }
