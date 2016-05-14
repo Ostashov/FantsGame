@@ -13,9 +13,9 @@ if ($user_id > 0) {
     $stmt = $pdo->query("UPDATE users SET user_hash='".$hash."' WHERE user_id='".$user_id."' ");
     $_SESSION["userid"] = $user_id;
     $_SESSION["hash"] = $hash;
-    echo "Success";
+    echo "1";
 } else {
-    echo "Error";
+    echo "0";
 }
 
 
