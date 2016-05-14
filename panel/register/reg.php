@@ -1,5 +1,6 @@
 <?php
 include("../../include/db.php");
+include("../../ep.php");
 
 $user_email = $_POST['email'];
 $user_pass = md5(md5(trim($_POST['password'])));
@@ -14,5 +15,14 @@ if ($number[0] != 0) {
 
     $stmt = $pdo->query($sql);
     echo "added";
+
+    $stmt = $pdo->query('SELECT user_id FROM users WHERE user_email="'.$user_email.'" ');
+    $row = $stmt->fetch();
+    $user_id = $row['user_id'];
+
+    $hash = md5($user_id.$user_email);
+    $stmt = $pdo->query("INSERT INTO email_verification VALUES ('$user_id', '$hash')");
+
+    echo emailSendLetter($hash);
 }
 ?>
