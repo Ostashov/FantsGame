@@ -26,7 +26,7 @@ function emailSendLetter ($hash) {
     $subject = "Подтверждение E-mail - Фанты";
     $message = "Спасибо за регистрацию!</br>";
     $message .= "Для подтверждения почты пройдите по ссылке:</br>";
-    $message .= $_SERVER['DOCUMENT_ROOT']."?action=email_check&hash=".$hash;
+    $message .= $_SERVER['DOCUMENT_ROOT']."/ep.php?action=email_check&hash=".$hash;
 
     $result = mail($user_email, $subject, $message);
     return $result;
