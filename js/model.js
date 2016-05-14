@@ -1,3 +1,16 @@
+var user_id;
+
+function checkAuth() {
+	$.ajax({
+        url: "checkAuth.php",
+        type: "POST",
+        success: function(data) {
+            alert(data);
+            user_id = data;
+        }
+    });
+}
+
 function addPlayerIntoDB(){
 	var form = $("#addPlayerForm");
 	var src = form.serialize();
