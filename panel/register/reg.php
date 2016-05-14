@@ -11,7 +11,8 @@ $number = $stmt->fetch(PDO::FETCH_NUM);
 if ($number[0] != 0) {
     echo "exists";
 } else {
-    $sql= "INSERT INTO users(user_email, user_password) VALUES ('$user_email', '$user_pass') ";
+    $date = date("Y-m-d H:i:s");
+    $sql= "INSERT INTO users(user_email, user_password, user_signUp_date) VALUES ('$user_email', '$user_pass', '$date') ";
 
     $stmt = $pdo->query($sql);
     echo "added";
@@ -23,6 +24,6 @@ if ($number[0] != 0) {
     $hash = md5($user_id.$user_email);
     $stmt = $pdo->query("INSERT INTO email_verification VALUES ('$user_id', '$hash')");
 
-    echo emailSendLetter($hash);
+    echo emailSendLetter($hash); // doesn't work
 }
 ?>
