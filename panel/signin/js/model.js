@@ -25,7 +25,7 @@ function signIn() {
         alert('TODO ajax');
         var src = "email=" + email + "&password=" + password;
         $.ajax({
-            url: "auth.php",
+            url: "../../auth.php",
             type: "POST",
             data: src,
             success: function(data) {

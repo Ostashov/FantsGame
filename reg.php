@@ -1,6 +1,6 @@
 <?php
-include("../../include/db.php");
-include("../../ep.php");
+include("include/db.php");
+include("ep.php");
 
 $user_email = $_POST['email'];
 $user_pass = md5(md5(trim($_POST['password'])));
