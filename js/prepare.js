@@ -33,7 +33,7 @@ function prepareHead() {
     var navbarHTML = "";
 
     if (user_id > 0) {
-        navbarHTML = "Привет, " + user_email;
+        navbarHTML = user_email;
         navbarHTML += ' <a href="/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>';
         navbarRight.html(navbarHTML);
     } else {

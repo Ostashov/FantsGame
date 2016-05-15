@@ -16,8 +16,10 @@ $opt = array(
 );
 $pdo = new PDO($dsn, "root", "root", $opt);
 
-session_save_path($_SERVER['DOCUMENT_ROOT'].'/session');
-ini_set('session.gc_maxlifetime', 60*60*24*7);
-session_start();
+if (!isset($_SESSION)) {
+	session_save_path($_SERVER['DOCUMENT_ROOT'].'/session');
+	ini_set('session.gc_maxlifetime', 60*60*24*7);
+	session_start();
+}
 //mysql_select_db("fantsDB");
 ?>

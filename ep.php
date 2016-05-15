@@ -1,18 +1,18 @@
 <?php
 include("include/db.php");
 
-$action = $_POST['action'];
+// $action = $_POST['action'];
 
-switch ($action) {
-    case 'email_check':
-        $hash = $_POST['hash'];
+// switch ($action) {
+//     case 'email_check':
+//         $hash = $_POST['hash'];
 
-        emailVerification($hash);
-        break;
-    default:
-        # code...
-        break;
-}
+//         emailVerification($hash);
+//         break;
+//     default:
+//         # code...
+//         break;
+// }
 
 function emailSendLetter ($hash) {
     $stmt = $pdo->query('SELECT user_id FROM email_verification WHERE hash="'.$hash.'" ');

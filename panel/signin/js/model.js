@@ -28,13 +28,12 @@ function signIn() {
             type: "POST",
             data: src,
             success: function(data) {
-                console.log(1);
-            },
-            complete: function() {
-                checkAuth();
-                if (user_id > 0) {
+                console.log(data);
+                if (data == "1") {
                     document.location.href = "/";
                 }
+            },
+            complete: function() {
             }
         });
     }

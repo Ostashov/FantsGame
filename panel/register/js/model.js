@@ -6,12 +6,12 @@ function register(userEmail, userPass) {
         data: src,
         success: function(data) {
             resultHandler(data);
+            console.log(data);
+            if (data == "1") {
+                document.location.href = "/panel/signin";
+            }
         },
         complete: function() {
-            checkAuth();
-            if (user_id > 0) {
-                document.location.href = "/";
-            }
         }
     });
 }
@@ -25,7 +25,7 @@ function resultHandler(data) {
             $("#userPassword").val('');
             $("#userPassword2").val('');
             break;
-        case "added":
+        case "1":
             break;
         default:
             break;
