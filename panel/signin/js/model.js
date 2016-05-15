@@ -1,3 +1,9 @@
+function relocation() {
+    if (user_id > 0) {
+        document.location.href = "/";
+    }
+}
+
 function signIn() {
     var email = $('#userEmail').val();
     var password = $('#userPassword').val();

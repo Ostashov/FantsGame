@@ -1,3 +1,5 @@
+function relocation() {}
+
 function addPlayerIntoDB(){
 	var form = $("#addPlayerForm");
 	var src = form.serialize();

@@ -14,6 +14,7 @@ function checkAuth() {
         },
         complete: function() {
             prepareHead();
+            relocation();
         },
         dataType: "json"
     });
@@ -33,7 +34,11 @@ function prepareHead() {
     var navbarHTML = "";
 
     if (user_id > 0) {
-        navbarHTML = user_email;
+        if (user_rules == 700) {
+            navbarHTML = '<a href="/panel">' + user_email + "</a>";
+        } else {
+            navbarHTML = user_email;
+        }
         navbarHTML += ' <a href="/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>';
         navbarRight.html(navbarHTML);
     } else {

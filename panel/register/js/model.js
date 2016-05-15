@@ -1,3 +1,9 @@
+function relocation() {
+    if (user_id > 0) {
+        document.location.href = "/";
+    }
+}
+
 function register(userEmail, userPass) {
     var src = "email=" + userEmail + "&password=" + userPass;
     $.ajax({
