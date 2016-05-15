@@ -3,9 +3,11 @@ var user_email = "";
 var user_rules = 0;
 var user_isVerified = 0;
 
+checkAuth();
+
 function checkAuth() {
     $.ajax({
-        url: "checkAuth.php",
+        url: "/checkAuth.php",
         type: "POST",
         success: function(response) {
             if (response[0] > 0) {
@@ -20,4 +22,18 @@ function checkAuth() {
         },
         dataType: "json"
     });
+}
+
+function prepareHead() {
+    var navbarRight = $("#personal-header");
+    var navbarHTML = "";
+
+    if (user_id > 0) {
+        navbarHTML = "Привет, " + user_email;
+        navbarHTML += ' <a href="/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>';
+        navbarRight.html(navbarHTML);
+    } else {
+        navbarHTML = '<a href="/panel/signin" class="btn btn-primary">Вход</a>';
+        navbarRight.html(navbarHTML);
+    }
 }

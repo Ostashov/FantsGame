@@ -1,8 +1,6 @@
 jQuery(document).ready(function(){
 	showAllPlayers();
 
-	checkAuth();
-
 	$('#gamers').on('click', '#addPlayerButton', function() {
 		addPlayerIntoDB();
 		showAllPlayers();
