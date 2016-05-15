@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
         <script src="../../js/prepare.js"></script>
+        <script src="js/controller.js"></script>
         <script src="js/model.js"></script>
         <script src="js/view.js"></script>
-        <script src="js/controller.js"></script>
     </head>
     <body>
         <header class="navbar navbar-static-top bs-docs-nav" role="banner">
@@ -28,8 +28,8 @@
                             <a href="/" class="navbar-brand">Фанты</a>
                         </div>
                         <div class="collapse navbar-collapse">
-                            <form class="navbar-form navbar-right">
-                            </form>                    
+                            <form class="navbar-form navbar-right" id="personal-header">
+                            </form>                  
                         </div>
                     </div>
                 </nav>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="col-md-2">
-                                <form action="" id="adminSignInForm">
+                                <form action="signIn();" id="userSignInForm">
                                     <div class="form-group">
                                         <label for="userEmail">Логин:</label>
                                         <input type="text" id="userEmail" class="form-control" name="userEmail" placeholder="Логин">
@@ -55,7 +55,7 @@
                                         <input type="password" id="userPassword" class="form-control" name="userPassword" placeholder="Пароль">
                                         <span id="userPasswordMessage" class="help-block"></span>
                                     </div>
-                                    <input type="button" id="adminSignInBtn" class="btn btn-primary" value="Войти" >
+                                    <input type="button" id="userSignInBtn" class="btn btn-primary" value="Войти" >
                                 </form>
                             </div>
                             <div class="col-md-4">

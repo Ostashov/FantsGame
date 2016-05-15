@@ -1,4 +1,8 @@
 jQuery(document).ready(function(){
+    if (user_id > 0) {
+        document.location.href = "/";
+    }
+
     $("#userRegisterForm").on("click", "#userRegisterBtn", function() {
         var password = $('#userPassword').val();
         var password2 = $('#userPassword2').val();

@@ -1,6 +1,4 @@
 function register(userEmail, userPass) {
-    alert(userEmail + " " + userPass);
-
     var src = "email=" + userEmail + "&password=" + userPass;
     $.ajax({
         url: "../../reg.php",
@@ -8,6 +6,12 @@ function register(userEmail, userPass) {
         data: src,
         success: function(data) {
             resultHandler(data);
+        },
+        complete: function() {
+            checkAuth();
+            if (user_id > 0) {
+                document.location.href = "/";
+            }
         }
     });
 }

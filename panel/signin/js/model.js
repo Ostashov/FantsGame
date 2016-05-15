@@ -22,15 +22,19 @@ function signIn() {
     }
 
     if (flag) {
-        alert('TODO ajax');
         var src = "email=" + email + "&password=" + password;
         $.ajax({
             url: "../../auth.php",
             type: "POST",
             data: src,
             success: function(data) {
-                alert(data);
-                //resultHandler(data);
+                console.log(1);
+            },
+            complete: function() {
+                checkAuth();
+                if (user_id > 0) {
+                    document.location.href = "/";
+                }
             }
         });
     }

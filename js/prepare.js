@@ -10,18 +10,22 @@ function checkAuth() {
         url: "/checkAuth.php",
         type: "POST",
         success: function(response) {
-            if (response[0] > 0) {
-                user_id = response[0];
-                user_email = response[1];
-                user_rules = response[2];
-                user_isVerified = response[3];
-            }
+            prepare(response);
         },
         complete: function() {
             prepareHead();
         },
         dataType: "json"
     });
+}
+
+function prepare(response) {
+    if (response[0] > 0) {
+        user_id = response[0];
+        user_email = response[1];
+        user_rules = response[2];
+        user_isVerified = response[3];
+    }
 }
 
 function prepareHead() {
