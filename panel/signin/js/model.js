@@ -1,6 +1,8 @@
 function relocation() {
     if (user_id > 0) {
         document.location.href = "/";
+    } else {
+        $('section.content').show();
     }
 }
 

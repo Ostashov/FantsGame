@@ -35,37 +35,39 @@
                 </nav>
             </div>
         </header>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Вход</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="col-md-2">
-                                <form action="signIn();" id="userSignInForm">
-                                    <div class="form-group">
-                                        <label for="userEmail">E-mail:</label>
-                                        <input type="text" id="userEmail" class="form-control" name="userEmail" placeholder="E-mail">
-                                        <span id="userEmailMessage" class="help-block"></span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="userPassword">Пароль:</label>
-                                        <input type="password" id="userPassword" class="form-control" name="userPassword" placeholder="Пароль">
-                                        <span id="userPasswordMessage" class="help-block"></span>
-                                    </div>
-                                    <input type="button" id="userSignInBtn" class="btn btn-primary" value="Войти" >
-                                </form>
+        <section class="content" hidden>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Вход</h3>
                             </div>
-                            <div class="col-md-4">
-                                <p><a href="/panel/register">Регистрация</a></p>
+                            <div class="panel-body">
+                                <div class="col-md-2">
+                                    <form action="signIn();" id="userSignInForm">
+                                        <div class="form-group">
+                                            <label for="userEmail">E-mail:</label>
+                                            <input type="text" id="userEmail" class="form-control" name="userEmail" placeholder="E-mail">
+                                            <span id="userEmailMessage" class="help-block"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="userPassword">Пароль:</label>
+                                            <input type="password" id="userPassword" class="form-control" name="userPassword" placeholder="Пароль">
+                                            <span id="userPasswordMessage" class="help-block"></span>
+                                        </div>
+                                        <input type="button" id="userSignInBtn" class="btn btn-primary" value="Войти" >
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><a href="/panel/register">Регистрация</a></p>
+                                </div>
                             </div>
                         </div>
+                        
                     </div>
-                    
                 </div>
             </div>
-        </div>
+        </section>
     </body>
 </html>
