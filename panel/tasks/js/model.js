@@ -4,5 +4,11 @@ function relocation() {
     }
     if (user_rules != 700) {
         document.location.href = "/";
+    } else {
+        $('section.content').show();
     }
+}
+
+function downloadTasks() {
+    
 }
