@@ -41,11 +41,13 @@
                         <div class="tasks-show-form">
                             <h4>Задания</h4>
                             <form action="">
-                                <label for="taskCategory">Категория:</label>
-                                <select name="taskCategory" id="">
-                                    <option value="1">Обычная</option>
-                                </select>
+                                <div class="form-group">
+                                    <label for="taskCategory">Категория:</label>
+                                    <select name="taskCategory" id="">
+                                        <option value="1">Обычная</option>
+                                    </select>
                                     <input type="button" class="btn btn-xs btn-primary" id="tasksShowBtn" value="Показать">
+                                </div>
                             </form> 
                         </div>
                     </div>
@@ -62,7 +64,10 @@
                                             <option value="1">Обычная</option>
                                         </select>
                                     </div>
-                                    <div class="form-group"></div>
+                                    <div class="form-group">
+                                        <label for="taskText">Текст задания:</label>
+                                        <textarea name="taskText" class="form-control" id="" rows="3"></textarea>
+                                    </div>
                                 </form>
                             </div>
                         </div>
