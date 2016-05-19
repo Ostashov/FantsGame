@@ -3,7 +3,7 @@ function relocation() {
         document.location.href = "/panel/signin";
     }
     if (user_rules != 700) {
-        document.location.href = "/";
+        document.location.href = "/panel";
     } else {
         $('section.content').show();
     }
