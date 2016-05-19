@@ -25,3 +25,7 @@ function downloadTasks() {
         dataType: "json"
     });
 }
+
+function addTask() {
+    var src = $("#add-task-form").serialize();
+}

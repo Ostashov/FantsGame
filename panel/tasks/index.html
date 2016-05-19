@@ -57,7 +57,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" id="add-task-head">Добавить задание</div>
                             <div class="panel-body" id="add-task-body" hidden>
-                                <form class="add-task-form">
+                                <form class="add-task-form" id="add-task-form">
                                     <div class="form-group row">
                                         <div class="col-md-3">
                                             <label for="taskCategory" class="control-label">Категория:</label>
@@ -78,23 +78,24 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="taskText" class="control-label">Текст задания:</label>
-                                        <textarea name="taskText" class="form-control" id="" rows="3"></textarea>
+                                        <textarea name="taskText" class="form-control" id="task-text" rows="3"></textarea>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-2">
                                             <label for="taskPlus" class="control-label">Плюс:</label>
-                                            <input type="text" name="taskPlus" class="form-control">
+                                            <input type="text" name="taskPlus" class="form-control" id="task-plus">
                                         </div>
                                         <div class="col-md-2">
                                             <label for="taskMinus" class="control-label">Минус:</label>
-                                            <input type="text" name="taskMinus" class="form-control">
+                                            <input type="text" name="taskMinus" class="form-control" id="task-minus">
                                         </div>
                                         <div class="col-md-2 col-md-offset-6">
                                             <label for="taskTimer">Время (сек.):</label>
-                                            <input type="text" name="taskTimer" class="form-control">
+                                            <input type="text" name="taskTimer" class="form-control" value="0">
                                         </div>
                                     </div>
-                                    <input type="button" class="btn btn-success" value="Добавить">
+                                    <input type="button" class="btn btn-success" id="add-task-btn" value="Добавить">
+                                    <span class="help-block" id="result-block"></span>
                                 </form>
                             </div>
                         </div>
