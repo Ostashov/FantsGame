@@ -28,4 +28,13 @@ function downloadTasks() {
 
 function addTask() {
     var src = $("#add-task-form").serialize();
+    $.ajax({
+            url: "addTask.php",
+            type: "POST",
+            data: src,
+            success: function(response) {
+                console.log(response);
+                $("#result-block").html("Задание добавлено");
+            }
+        });
 }
