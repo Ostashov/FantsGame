@@ -2,7 +2,6 @@ function relocation() {
 	if (user_id == 0) {
 		document.location.href = "/panel/signin";
 	}
-	if (user_rules != 700) {
-		document.location.href = "/";
-	}
+
+	printLeftMenu(); // Костыль, чтобы user_id сохранился
 }

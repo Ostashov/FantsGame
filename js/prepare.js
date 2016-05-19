@@ -34,11 +34,7 @@ function prepareHead() {
     var navbarHTML = "";
 
     if (user_id > 0) {
-        if (user_rules == 700) {
-            navbarHTML = '<a href="/panel">' + user_email + "</a>";
-        } else {
-            navbarHTML = user_email;
-        }
+        navbarHTML = '<a href="/panel">' + user_email + "</a>";
         navbarHTML += ' <a href="/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>';
         navbarRight.html(navbarHTML);
     } else {
