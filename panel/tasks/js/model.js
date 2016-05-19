@@ -9,6 +9,19 @@ function relocation() {
     }
 }
 
+function printTasks() {
+	var tasks = downloadTasks();
+	//printTask();
+}
+
 function downloadTasks() {
-    
+    $.ajax({
+        url: "/panel/tasks/downloadTasks.php",
+        type: "POST",
+        success: function(response) {
+        },
+        complete: function() {
+        },
+        dataType: "json"
+    });
 }
