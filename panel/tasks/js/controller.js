@@ -35,4 +35,9 @@ jQuery(document).ready(function(){
             addTask();
         }
     });
+
+    $("#tasksShowBtn").on("click", function() {
+        var category = $("#task-category-show").val();
+        downloadTasks(category);
+    });
 });

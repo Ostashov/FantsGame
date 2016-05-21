@@ -1,3 +1,3 @@
-function printTask() {
-    
+function printTask(task) {
+    console.log(task);
 }

@@ -9,16 +9,23 @@ function relocation() {
     }
 }
 
-function printTasks() {
-	var tasks = downloadTasks();
-	//printTask();
+function printTasks(tasks) {
+    if (tasks) {
+        for (var i = 0; i < tasks.length; i++) {
+            printTask(tasks[i]);
+        }
+    }
 }
 
-function downloadTasks() {
+function downloadTasks(category) {
+    var src = 'category=' + category;
     $.ajax({
         url: "/panel/tasks/downloadTasks.php",
         type: "POST",
+        data: src,
         success: function(response) {
+            console.log(response.data);
+            printTasks(response.data);
         },
         complete: function() {
         },
