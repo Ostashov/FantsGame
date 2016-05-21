@@ -11,9 +11,12 @@ function relocation() {
 
 function printTasks(tasks) {
     if (tasks) {
+        $(".tasks-list").html("");
         for (var i = 0; i < tasks.length; i++) {
             printTask(tasks[i]);
         }
+    } else {
+        $(".tasks-list").html("Не найдено подходящих заданий");
     }
 }
 

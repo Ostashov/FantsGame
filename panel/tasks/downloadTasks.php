@@ -21,7 +21,7 @@ if ($number[0] > 0) {
 
     echo json_encode($output);
 } else {
-    echo "Нет подходящих заданий";
+    echo json_encode([]);
 }
 
 ?>
