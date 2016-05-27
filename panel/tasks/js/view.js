@@ -18,6 +18,7 @@ function printTask(task) {
 
     taskInfo.appendChild(taskId);
     taskInfo.innerHTML += "<button type='button' class='edit-task-btn' value='" + task['task_id'] + "'><i class='fa fa-cog' aria-hidden='true'></i></button>";
+    taskInfo.innerHTML += "<button type='button' class='delete-task-btn hidden-btn' value='" + task['task_id'] + "'><i class='fa fa-times' aria-hidden='true'></i></button>";
     taskInfo.innerHTML += '<div class="task-level-info">' + task['task_level'] + '</div>';
 
     taskProperties.innerHTML = '<div class="task-plus-info">+' + task['task_plus'] + '</div><div class="task-minus-info">-' + task['task_minus'] + '</div>';
