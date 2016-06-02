@@ -31,6 +31,10 @@
         color: #9d9d9d;
     }
 
+    .delete-task-btn:hover {
+        color: #FF0000;
+    }
+
 .hidden-btn {
     display: none;
 }
@@ -59,9 +63,9 @@
 }
 
 .task-minus-info {
-    color: red;
+    color: #FF0000;
 }
 
 .task-plus-info {
-    color: green;
+    color: #008000;
 }

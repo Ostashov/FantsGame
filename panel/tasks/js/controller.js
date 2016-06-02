@@ -42,4 +42,9 @@ jQuery(document).ready(function(){
     $(".tasks-list").on("click", ".edit-task-btn", function() {
         $(this).next(".delete-task-btn").show();
     });
+
+    $(".tasks-list").on("click", ".delete-task-btn", function() {
+        var task_id = $(this).val();
+        deleteTask(task_id);
+    });
 });

@@ -48,3 +48,16 @@ function addTask() {
             }
         });
 }
+
+function deleteTask(task_id) {
+    $.ajax({
+        url: "/panel/tasks/deleteTask.php",
+        type: "POST",
+        data: "task_id=" + task_id,
+        success: function(response) {
+            if (response == "1") {
+                $(".delete-task-btn[value="+task_id+"]").parent().parent().empty();
+            }
+        }
+    });
+}
