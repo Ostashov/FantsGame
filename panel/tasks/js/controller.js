@@ -40,7 +40,11 @@ jQuery(document).ready(function(){
     });
 
     $(".tasks-list").on("click", ".edit-task-btn", function() {
-        $(this).next(".delete-task-btn").show();
+        if ($(this).next(".delete-task-btn").is(":hidden")) {
+            $(this).next(".delete-task-btn").show();
+        } else {
+            $(this).next(".delete-task-btn").hide();
+        }
     });
 
     $(".tasks-list").on("click", ".delete-task-btn", function() {
