@@ -14,7 +14,8 @@
     display: inline-block;
 }
 
-.edit-task-btn {
+.edit-task-btn,
+.delete-task-btn {
     border: none;
     background-color: white;
     font-size: 12px;
@@ -29,6 +30,14 @@
     .edit-task-btn:hover {
         color: #9d9d9d;
     }
+
+    .delete-task-btn:hover {
+        color: #FF0000;
+    }
+
+.hidden-btn {
+    display: none;
+}
 
 .task-level-info {
     border: 1px solid;
@@ -54,9 +63,9 @@
 }
 
 .task-minus-info {
-    color: red;
+    color: #FF0000;
 }
 
 .task-plus-info {
-    color: green;
+    color: #008000;
 }

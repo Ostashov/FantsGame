@@ -14,10 +14,6 @@ function register(userEmail, userPass) {
         data: src,
         success: function(data) {
             resultHandler(data);
-            console.log(data);
-            if (data == "1") {
-                document.location.href = "/panel/signin";
-            }
         },
         complete: function() {
         }
@@ -34,6 +30,7 @@ function resultHandler(data) {
             $("#userPassword2").val('');
             break;
         case "1":
+            document.location.href = "/panel/signin";
             break;
         default:
             break;

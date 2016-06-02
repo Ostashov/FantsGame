@@ -38,4 +38,13 @@ jQuery(document).ready(function(){
         var category = $("#task-category-show").val();
         downloadTasks(category);
     });
+
+    $(".tasks-list").on("click", ".edit-task-btn", function() {
+        $(this).next(".delete-task-btn").show();
+    });
+
+    $(".tasks-list").on("click", ".delete-task-btn", function() {
+        var task_id = $(this).val();
+        deleteTask(task_id);
+    });
 });
