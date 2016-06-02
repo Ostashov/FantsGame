@@ -1,6 +1,10 @@
 jQuery(document).ready(function(){
     $("#add-task-head").on("click", function() {
-        $("#add-task-body").show();
+        if ($("#add-task-body").is(":hidden")) {
+            $("#add-task-body").show("fast");
+        } else {
+            $("#add-task-body").hide("fast");
+        }
     });
 
     $("#add-task-btn").on("click", function() {
@@ -24,7 +28,7 @@ jQuery(document).ready(function(){
             $("#task-minus").parent().addClass("has-error");
         } else {
             $("#task-minus").parent().removeClass("has-error");
-        }       
+        }
 
         if (!flag) {
             $("#result-block").html("Заполните все поля");
