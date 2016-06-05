@@ -9,8 +9,40 @@ function printTask(task) {
     editTaskBlock.className = "edit-task-block";
     editTaskBlock.style.display = "none";
     editTaskBlock.innerHTML = '<form class="edit-task-form">' +
-                                    '<label for="taskText" class="control-label">Текст задания:</label>' +
-                                    '<textarea name="taskText" class="form-control">' + task['task_content'] + '</textarea>' +
+                                    '<div class="form-group">' +
+                                        '<div class="row">' + 
+                                            '<div class="col-md-3">' +
+                                                '<label for="taskLevel">Сложность:</label>' +
+                                                '<select name="taskLevel" >' +
+                                                    '<option value="1">1</option>' +
+                                                    '<option value="2">2</option>' +
+                                                    '<option value="3">3</option>' +
+                                                    '<option value="4">4</option>' +
+                                                    '<option value="5">5</option>' +
+                                                '</select>' +
+                                            '</div>' +
+                                        '</div>' +
+
+                                        '<input type="text" name="taskID" value="'+ task['task_id'] +'" hidden />' +
+                                        '<label for="taskText" class="control-label">Текст задания:</label>' +
+                                        '<textarea name="taskText" class="form-control">' + task['task_content'] + '</textarea>' +
+
+                                        '<div class="row">' +
+                                            '<div class="col-md-2">' +
+                                                '<label for="taskPlus" class="control-label">Плюс:</label>' +
+                                                '<input type="text" name="taskPlus" class="form-control" value="'+ task['task_plus'] +'" />' +
+                                            '</div>' +
+                                            '<div class="col-md-2">' +
+                                                '<label for="taskMinus" class="control-label">Минус:</label>' +
+                                                '<input type="text" name="taskMinus" class="form-control" value="'+ task['task_minus'] +'" />' +
+                                            '</div>' +
+                                            '<div class="col-md-2 col-md-offset-6">' +
+                                                '<label for="taskTimer">Время (сек.):</label>' +
+                                                '<input type="text" name="taskTimer" class="form-control" value="'+ task['task_timer'] +'">' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<input type="button" class="btn btn-success edit-task-form-btn" value="Изменить">' +
                                 '</form>';
 
 

@@ -50,10 +50,19 @@ jQuery(document).ready(function(){
             $(this).next(".delete-task-btn").hide();
         }
 
-        if ($(this).parent().next(".edit-task-block").is(":hidden")) {
-            $(this).parent().next(".edit-task-block").show();
+        if ($(this).parent().parent().children(".edit-task-block").is(":hidden")) {
+            $(this).parent().parent().children(".edit-task-block").show("fast");
         } else {
-            $(this).parent().next(".edit-task-block").hide();
+            $(this).parent().parent().children(".edit-task-block").hide("fast");
+        }
+
+        console.log($(this).parent());
+        if ($(this).parent().parent().children(".info-task-block").is(":hidden")) {
+            $(this).parent().parent().children(".info-task-block").show("fast");
+            $(this).parent().children(".task-level-info").show("fast");
+        } else {
+            $(this).parent().parent().children(".info-task-block").hide("fast");
+            $(this).parent().children(".task-level-info").hide("fast");
         }
     });
 
