@@ -3,12 +3,12 @@ include($_SERVER['DOCUMENT_ROOT']."/include/db.php");
 
 $category = $_POST['category'];
 
-$sql = "SELECT * FROM tasks WHERE task_category='".$category."' ";
+$sql = "SELECT * FROM tasks WHERE task_category='".$category."' AND task_isDeleted='0' ";
 $stmt = $pdo->query($sql);
 $number = $stmt->fetch(PDO::FETCH_NUM);
 
 if ($number[0] > 0) {
-    $sql = "SELECT * FROM tasks WHERE task_category='".$category."' ";
+    $sql = "SELECT * FROM tasks WHERE task_category='".$category."' AND task_isDeleted='0' ";
     $stmt = $pdo->query($sql);
 
     $output = Array();
