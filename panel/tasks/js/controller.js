@@ -49,6 +49,12 @@ jQuery(document).ready(function(){
         } else {
             $(this).next(".delete-task-btn").hide();
         }
+
+        if ($(this).parent().next(".edit-task-block").is(":hidden")) {
+            $(this).parent().next(".edit-task-block").show();
+        } else {
+            $(this).parent().next(".edit-task-block").hide();
+        }
     });
 
     $(".tasks-list").on("click", ".delete-task-btn", function() {

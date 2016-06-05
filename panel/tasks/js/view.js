@@ -4,6 +4,19 @@ function printTask(task) {
     var element = $(".tasks-list");
     var taskBlock = document.createElement('div');
     taskBlock.className = "task-block";
+
+    var editTaskBlock = document.createElement('div');
+    editTaskBlock.className = "edit-task-block";
+    editTaskBlock.style.display = "none";
+    editTaskBlock.innerHTML = '<form class="edit-task-form">' +
+                                    '<label for="taskText" class="control-label">Текст задания:</label>' +
+                                    '<textarea name="taskText" class="form-control">' + task['task_content'] + '</textarea>' +
+                                '</form>';
+
+
+
+    var infoTaskBlock = document.createElement('div');
+    infoTaskBlock.className = "info-task-block";
     var taskInfo = document.createElement('div');
     taskInfo.className = "task-info";
     var taskId = document.createElement('div');
@@ -27,7 +40,9 @@ function printTask(task) {
     }
 
     taskBlock.appendChild(taskInfo);
-    taskBlock.appendChild(taskText);
-    taskBlock.appendChild(taskProperties);
+    infoTaskBlock.appendChild(taskText);
+    infoTaskBlock.appendChild(taskProperties);
+    taskBlock.appendChild(editTaskBlock);
+    taskBlock.appendChild(infoTaskBlock);
     element.append(taskBlock);
 }
