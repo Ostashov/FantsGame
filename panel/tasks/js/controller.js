@@ -1,6 +1,10 @@
 jQuery(document).ready(function(){
     $("#add-task-head").on("click", function() {
-        $("#add-task-body").show();
+        if ($("#add-task-body").is(":hidden")) {
+            $("#add-task-body").show("fast");
+        } else {
+            $("#add-task-body").hide("fast");
+        }
     });
 
     $("#add-task-btn").on("click", function() {
@@ -24,7 +28,7 @@ jQuery(document).ready(function(){
             $("#task-minus").parent().addClass("has-error");
         } else {
             $("#task-minus").parent().removeClass("has-error");
-        }       
+        }
 
         if (!flag) {
             $("#result-block").html("Заполните все поля");
@@ -40,7 +44,11 @@ jQuery(document).ready(function(){
     });
 
     $(".tasks-list").on("click", ".edit-task-btn", function() {
-        $(this).next(".delete-task-btn").show();
+        if ($(this).next(".delete-task-btn").is(":hidden")) {
+            $(this).next(".delete-task-btn").show();
+        } else {
+            $(this).next(".delete-task-btn").hide();
+        }
     });
 
     $(".tasks-list").on("click", ".delete-task-btn", function() {

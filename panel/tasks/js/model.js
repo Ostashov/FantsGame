@@ -56,7 +56,9 @@ function deleteTask(task_id) {
         data: "task_id=" + task_id,
         success: function(response) {
             if (response == "1") {
-                $(".delete-task-btn[value="+task_id+"]").parent().parent().empty();
+                $(".delete-task-btn[value="+task_id+"]").parent().parent().hide("fast", function() {
+                    $(this).empty();
+                });
             }
         }
     });
