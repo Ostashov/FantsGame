@@ -77,4 +77,5 @@ function printTask(task) {
     taskBlock.appendChild(editTaskBlock);
     taskBlock.appendChild(infoTaskBlock);
     element.append(taskBlock);
+    $(".edit-task-form").last().find("select[name='taskLevel'] option[value='"+ task['task_level'] +"']").attr("selected", "selected");
 }
