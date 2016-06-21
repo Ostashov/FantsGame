@@ -70,4 +70,8 @@ jQuery(document).ready(function(){
         var task_id = $(this).val();
         deleteTask(task_id);
     });
+
+    $(".tasks-list").on("click", ".edit-task-form-btn", function() {
+        
+    });
 });

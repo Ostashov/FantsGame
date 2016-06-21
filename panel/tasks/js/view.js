@@ -21,6 +21,12 @@ function printTask(task) {
                                                     '<option value="5">5</option>' +
                                                 '</select>' +
                                             '</div>' +
+                                            '<div class="col-md-3">' +
+                                                '<label for="">Категория</label>' +
+                                                '<select name="taskCategory" id="">' +
+                                                    '<option value="1">Обычная</option>' +
+                                                '</select>' +
+                                            '</div>' +
                                         '</div>' +
 
                                         '<input type="text" name="taskID" value="'+ task['task_id'] +'" hidden />' +
@@ -78,4 +84,5 @@ function printTask(task) {
     taskBlock.appendChild(infoTaskBlock);
     element.append(taskBlock);
     $(".edit-task-form").last().find("select[name='taskLevel'] option[value='"+ task['task_level'] +"']").attr("selected", "selected");
+    $(".edit-task-form").last().find("select[name='taskCategory'] option[value='"+ task['task_category'] +"']").attr("selected", "selected");
 }
