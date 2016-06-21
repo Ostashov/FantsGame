@@ -1,3 +1,7 @@
+.add-task-head:hover {
+    cursor: pointer;
+}
+
 .task-block {
     border-bottom: 1px solid #f5f5f5;
     margin-bottom: 10px;
