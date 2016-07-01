@@ -63,3 +63,16 @@ function deleteTask(task_id) {
         }
     });
 }
+
+function updateTask(newData) {
+    console.log(newData);
+
+    $.ajax({
+        url: "/panel/tasks/updateTask.php",
+        type: "POST",
+        data: newData,
+        success: function (response) {
+            alert(response);
+        }
+    });
+}

@@ -56,7 +56,6 @@ jQuery(document).ready(function(){
             $(this).parent().parent().children(".edit-task-block").hide("fast");
         }
 
-        console.log($(this).parent());
         if ($(this).parent().parent().children(".info-task-block").is(":hidden")) {
             $(this).parent().parent().children(".info-task-block").show("fast");
             $(this).parent().children(".task-level-info").show("fast");
@@ -72,6 +71,7 @@ jQuery(document).ready(function(){
     });
 
     $(".tasks-list").on("click", ".edit-task-form-btn", function() {
-        
+        var form = $(this).parents("form.edit-task-form");
+        updateTask(form.serialize());
     });
 });
