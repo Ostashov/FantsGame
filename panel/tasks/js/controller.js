@@ -72,6 +72,6 @@ jQuery(document).ready(function(){
 
     $(".tasks-list").on("click", ".edit-task-form-btn", function() {
         var form = $(this).parents("form.edit-task-form");
-        updateTask(form.serialize());
+        var result = updateTask(form.serialize());
     });
 });

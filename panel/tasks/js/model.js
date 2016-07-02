@@ -72,7 +72,14 @@ function updateTask(newData) {
         type: "POST",
         data: newData,
         success: function (response) {
-            alert(response);
+            if (response == 1) {
+                downloadTasks($("#task-category-show").val());
+            } else {
+                alert(response);
+            }
+        },
+        error: function(response) {
+            console.log("Error in AJAX!");
         }
     });
 }
