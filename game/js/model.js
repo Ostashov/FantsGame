@@ -5,3 +5,9 @@ function relocation() {
         $('section.content').show();
     }
 }
+
+function downloadGames() {
+    var listOfGames = 0;
+
+    return listOfGames;
+}
