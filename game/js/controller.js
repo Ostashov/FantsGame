@@ -21,5 +21,11 @@ jQuery(document).ready(function(){
 		} else {
 			input.parent().parent().removeClass("not-valid");
 		}
+
+		if ($(".not-valid").length != 0) {
+			$(".add-game-btn").attr('disabled',true);
+		} else {
+			$(".add-game-btn").attr('disabled',false);
+		}
 	});
 });
