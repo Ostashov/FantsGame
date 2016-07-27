@@ -14,3 +14,8 @@ function downloadGames() {
 
     return listOfGames;
 }
+
+function isValidPlayerName(playerName) {
+    var pattern = new RegExp("[^a-zа-яA-ZА-Я0-9 .]");
+    return pattern.test(playerName);
+}

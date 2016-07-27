@@ -13,4 +13,13 @@ jQuery(document).ready(function(){
 	$("table.new-players").on("click", ".del-player-btn", function() {
 		deleteNewPlayerInput($(this));
 	});
+
+	$("table.new-players").on("input", "input", function() {
+		var input = $(this);
+		if (isValidPlayerName(input.val())) {
+			input.parent().parent().addClass("not-valid");
+		} else {
+			input.parent().parent().removeClass("not-valid");
+		}
+	});
 });

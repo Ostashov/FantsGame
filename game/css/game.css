@@ -1,3 +1,7 @@
+* {
+	z-index: 0;
+}
+
 .new-game-form-block {
     margin-top: 20px;
 }
@@ -17,4 +21,15 @@ table.new-players td {
 
 .warning-msg {
 	color: #337ab7;
+}
+
+.not-valid:after {
+	content: "Только буквы, цифры, пробел и точка";
+    display: block;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    padding: 0px 4px;
+    margin-left: 5px;
+    border: 1px solid #c7254e;
+    width: 160px;
 }
