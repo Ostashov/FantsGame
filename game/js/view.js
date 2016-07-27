@@ -14,7 +14,7 @@ function showNewGameForm() {
 function addNewPlayerInput() {
     playerInputNumber = playerInputNumber + 1;
 
-    $("table.new-players .plus-player-input-btn:last-child").hide();
+    $("table.new-players .plus-player-input-btn:last-child").hide("fast");
     $("table.new-players").append('<tr class="tr-player-' + playerInputNumber + '" style="display:none;">' +
                                         '<td class="td-del-player-btn">' +
                                             '<span class="del-player-btn">' +
@@ -30,4 +30,10 @@ function addNewPlayerInput() {
                                    '</tr>');
 
     $("table.new-players tr:last-child").show("fast");
+}
+
+function deleteNewPlayerInput(delButton) {
+    delButton.parent().parent().empty().remove();
+    console.log($("table.new-players tr:last-child"));
+    $("table.new-players tr:last-child .plus-player-input-btn").show("fast");
 }
