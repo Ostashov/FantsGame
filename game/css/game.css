@@ -1,3 +1,12 @@
 .new-game-form-block {
     margin-top: 20px;
 }
+
+.del-player-btn {
+	color: #FF0000;
+	cursor: pointer;
+}
+
+table.new-players tr {
+	border: 0;
+}

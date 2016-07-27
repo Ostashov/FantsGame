@@ -65,24 +65,65 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="new-game-form-block" hidden>
+                        <div class="new-game-form-block" style="display: none;">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <form action="" class="new-game-form">
+                                    <form class="new-game-form">
                                         <div class="form-group row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <label for="taskCategory" class="control-label">Категория:</label>
                                                 <select name="taskCategory" id="">
-                                                    <option value="1" selected="">Обычная</option>
+                                                    <option value="1" selected>Обычная</option>
+                                                </select>
+                                                <label for="gameLevel">Сложность:</label>
+                                                <select name="gameLevel" id="">
+                                                    <option value="1" selected>1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="listOfPlayers" class="control-label">Игроки:</label>
-                                            <input type="text" name="listOfPlayers">
+                                            <div class="col-md-6">
+                                                <label for="listOfPlayers" class="control-label">Игроки:</label>
+                                                <table class="table new-players">
+                                                    <tbody>
+                                                        <tr class="tr-player-1">
+                                                            <td class="td-del-player-btn">
+                                                                <span class="del-player-btn">
+                                                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                                                </span>
+                                                            </td>
+                                                            <td class="input-player-1">
+                                                                <input type="text" name="name-player-1" placeholder="Имя игрока">
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-xs btn-default plus-player-input-btn" style="display: none;">+</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="tr-player-2">
+                                                            <td class="td-del-player-btn">
+                                                                <span class="del-player-btn">
+                                                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                                                </span>
+                                                            </td>
+                                                            <td class="input-player-2">
+                                                                <input type="text" name="name-player-2" placeholder="Имя игрока">
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-xs btn-default plus-player-input-btn">+</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                         <div class="form-group">
-                                            <button class="btn btn-success addGameBtn">Играть</button>
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-success addGameBtn">Играть</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
