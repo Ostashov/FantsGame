@@ -1,4 +1,5 @@
 var playerInputNumber = 2;
+var playerInputCounter = 2;
 
 function relocation() {
     if (user_id == 0) {
