@@ -15,6 +15,8 @@ function addNewPlayerInput() {
     if (playerInputCounter >= 10) {
         $(".warning-msg").html("Максимум 10 игроков!");
     } else {
+        $(".warning-msg").html("");
+        
         playerInputNumber = playerInputNumber + 1;
         playerInputCounter = playerInputCounter + 1;
 
@@ -38,15 +40,21 @@ function addNewPlayerInput() {
 }
 
 function deleteNewPlayerInput(delButton) {
-    delButton.parent().parent().empty().remove();
-    console.log($("table.new-players tr:last-child"));
-    $("table.new-players tr:last-child .plus-player-input-btn").show("fast");
-
-    playerInputCounter = playerInputCounter - 1;
-
-    if (playerInputCounter >= 10) {
-        $(".warning-msg").html("Максимум 10 игроков!");
+    if (playerInputCounter < 3) {
+        $(".warning-msg").html("Минимум 2 игрока!");
     } else {
         $(".warning-msg").html("");
+
+        delButton.parent().parent().empty().remove();
+        console.log($("table.new-players tr:last-child"));
+        $("table.new-players tr:last-child .plus-player-input-btn").show("fast");
+
+        playerInputCounter = playerInputCounter - 1;
+
+        if (playerInputCounter >= 10) {
+            $(".warning-msg").html("Максимум 10 игроков!");
+        } else {
+            $(".warning-msg").html("");
+        }
     }
 }
