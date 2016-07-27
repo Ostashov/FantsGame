@@ -12,6 +12,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <!-- end Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/game.css">
         
         <script src="/js/prepare.js"></script>
         <script src="js/model.js"></script>
@@ -49,12 +50,44 @@
                                     <th>Последняя игра</th>
                                     <th>Игроки</th>
                                     <th>Управление</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
                         <button class='btn btn-primary add-new-game-btn'>Создать игру</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="new-game-form-block" hidden>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <form action="" class="new-game-form">
+                                        <div class="form-group row">
+                                            <div class="col-md-6">
+                                                <label for="taskCategory" class="control-label">Категория:</label>
+                                                <select name="taskCategory" id="">
+                                                    <option value="1" selected="">Обычная</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="listOfPlayers" class="control-label">Игроки:</label>
+                                            <input type="text" name="listOfPlayers">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-success addGameBtn">Играть</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
