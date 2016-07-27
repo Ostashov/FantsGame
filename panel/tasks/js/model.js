@@ -27,7 +27,6 @@ function downloadTasks(category) {
         type: "POST",
         data: src,
         success: function(response) {
-            console.log(response.data);
             printTasks(response.data);
         },
         complete: function() {
@@ -65,8 +64,6 @@ function deleteTask(task_id) {
 }
 
 function updateTask(newData) {
-    console.log(newData);
-
     $.ajax({
         url: "/panel/tasks/updateTask.php",
         type: "POST",
