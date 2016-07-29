@@ -80,3 +80,11 @@ function checkMessages() {
         $(".new-game-form-block .input-msg").hide("fast").html("");
     }
 }
+
+function checkButton() {
+    if ((inputErrorsCounter !== 0) & (radioErrorsCounter !== 0)) {
+        $(".add-game-btn").attr('disabled',true);
+    } else {
+        $(".add-game-btn").attr('disabled',false);
+    }
+}

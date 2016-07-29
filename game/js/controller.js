@@ -30,11 +30,7 @@ jQuery(document).ready(function(){
 			input.parent().parent().removeClass("danger");
 		}
 
-		if ((inputErrorsCounter !== 0) & (radioErrorsCounter !== 0)) {
-			$(".add-game-btn").attr('disabled',true);
-		} else {
-			$(".add-game-btn").attr('disabled',false);
-		}
+		checkButton();
 	});
 
 
