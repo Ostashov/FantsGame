@@ -1,5 +1,7 @@
 var playerInputNumber = 2;
 var playerInputCounter = 2;
+var inputErrorsCounter = 0;
+var radioErrorsCounter = 0;
 
 function relocation() {
     if (user_id == 0) {

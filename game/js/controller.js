@@ -17,15 +17,25 @@ jQuery(document).ready(function(){
 	$("table.new-players").on("input", "input", function() {
 		var input = $(this);
 		if (isValidPlayerName(input.val())) {
-			input.parent().parent().addClass("not-valid");
+			if (!input.hasClass("invalid-name")) {
+				inputErrorsCounter += 1;
+			}
+			checkMessages();
+			input.addClass("invalid-name");
+			input.parent().parent().addClass("danger");
 		} else {
-			input.parent().parent().removeClass("not-valid");
+			inputErrorsCounter -= 1;
+			checkMessages();
+			input.removeClass("invalid-name");
+			input.parent().parent().removeClass("danger");
 		}
 
-		if ($(".not-valid").length != 0) {
+		if ((inputErrorsCounter !== 0) & (radioErrorsCounter !== 0)) {
 			$(".add-game-btn").attr('disabled',true);
 		} else {
 			$(".add-game-btn").attr('disabled',false);
 		}
 	});
+
+
 });

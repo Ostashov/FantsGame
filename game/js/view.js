@@ -13,9 +13,9 @@ function showNewGameForm() {
 
 function addNewPlayerInput() {
     if (playerInputCounter >= 10) {
-        $(".warning-msg").html("Максимум 10 игроков!");
+        $(".limit-msg").html("Максимум 10 игроков!").show("fast");
     } else {
-        $(".warning-msg").html("");
+        $(".limit-msg").hide("fast").html("");
         
         playerInputNumber = playerInputNumber + 1;
         playerInputCounter = playerInputCounter + 1;
@@ -49,19 +49,34 @@ function addNewPlayerInput() {
 
 function deleteNewPlayerInput(delButton) {
     if (playerInputCounter < 3) {
-        $(".warning-msg").html("Минимум 2 игрока!");
+        $(".limit-msg").html("Минимум 2 игрока!").show("fast");
     } else {
-        $(".warning-msg").html("");
+        $(".limit-msg").hide("fast").html("");
+        var tr = delButton.parent().parent();
 
-        delButton.parent().parent().empty().remove();
+        if (tr.has(".invalid-name")) {
+            inputErrorsCounter -= 1;
+            checkMessages();
+        }
+
+        tr.hide("fast");
+        tr.empty().remove();
         $("table.new-players tr:last-child .plus-player-input-btn").show("fast");
 
         playerInputCounter = playerInputCounter - 1;
 
         if (playerInputCounter >= 10) {
-            $(".warning-msg").html("Максимум 10 игроков!");
+            $(".limit-msg").html("Максимум 10 игроков!");
         } else {
-            $(".warning-msg").html("");
+            $(".limit-msg").html("");
         }
+    }
+}
+
+function checkMessages() {
+    if (inputErrorsCounter) {
+        $(".new-game-form-block .input-msg").html("Только буквы, цифры, пробел и точка").show("fast");
+    } else {
+        $(".new-game-form-block .input-msg").hide("fast").html("");
     }
 }
