@@ -54,22 +54,21 @@ function deleteNewPlayerInput(delButton) {
         $(".limit-msg").hide("fast").html("");
         var tr = delButton.parent().parent();
 
-        if (tr.has(".invalid-name")) {
+        if (tr.find(".invalid-name").length) {
             inputErrorsCounter -= 1;
-            checkMessages();
+        }
+
+        if (tr.find(".no-gender").length) {
+            radioErrorsCounter -= 1;
         }
 
         tr.hide("fast");
         tr.empty().remove();
         $("table.new-players tr:last-child .plus-player-input-btn").show("fast");
 
-        playerInputCounter = playerInputCounter - 1;
+        playerInputCounter -= 1;
 
-        if (playerInputCounter >= 10) {
-            $(".limit-msg").html("Максимум 10 игроков!");
-        } else {
-            $(".limit-msg").html("");
-        }
+        checkMessages();
     }
 }
 
@@ -78,6 +77,16 @@ function checkMessages() {
         $(".new-game-form-block .input-msg").html("Только буквы, цифры, пробел и точка").show("fast");
     } else {
         $(".new-game-form-block .input-msg").hide("fast").html("");
+    }
+
+    if (playerInputCounter <= 10 & playerInputCounter >= 2) {
+        $(".limit-msg").hide("fast").html("");
+    }
+
+    if (radioErrorsCounter) {
+        $(".new-game-form-block .gender-msg").html("Не выбран пол").show("fast");
+    } else {
+        $(".new-game-form-block .gender-msg").hide("fast").html("");
     }
 }
 
