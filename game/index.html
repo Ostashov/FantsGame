@@ -86,7 +86,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="col-md-6">
+                                            <div class="col-md-9">
                                                 <label for="listOfPlayers" class="control-label">Игроки:</label>
                                                 <table class="table new-players">
                                                     <tbody>
@@ -98,6 +98,14 @@
                                                             </td>
                                                             <td class="input-player-1">
                                                                 <input type="text" name="name-player-1" placeholder="Имя игрока">
+                                                            </td>
+                                                            <td>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="gender-player-1" value="male"> м
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="gender-player-1" value="female"> ж
+                                                                </label>
                                                             </td>
                                                             <td>
                                                                 <button type="button" class="btn btn-xs btn-default plus-player-input-btn" style="display: none;">+</button>
@@ -113,12 +121,22 @@
                                                                 <input type="text" name="name-player-2" placeholder="Имя игрока">
                                                             </td>
                                                             <td>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="gender-player-2" value="male"> м
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="gender-player-2" value="female"> ж
+                                                                </label>
+                                                            </td>
+                                                            <td>
                                                                 <button type="button" class="btn btn-xs btn-default plus-player-input-btn">+</button>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                <div class="warning-msg"></div>
+                                                <div class="limit-msg warning-msg" style="dispay: none;"></div>
+                                                <div class="input-msg warning-msg" style="dispay: none;"></div>
+                                                <div class="gender-msg warning-msg" style="display: none;"></div>
                                             </div>
                                         </div>
                                         <div class="form-group">
