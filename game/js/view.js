@@ -31,6 +31,14 @@ function addNewPlayerInput() {
                                                 '<input type="text" name="name-player-' + playerInputNumber + '" placeholder="Имя игрока">' +
                                             '</td>' +
                                             '<td>' +
+                                                '<label class="radio-inline">' +
+                                                    '<input type="radio" name="gender-player-' + playerInputNumber + '" value="male"> м' +
+                                                '</label>' +
+                                                '<label class="radio-inline">' +
+                                                    '<input type="radio" name="gender-player-' + playerInputNumber + '" value="female"> ж' +
+                                                '</label>' +
+                                            '</td>' +
+                                            '<td>' +
                                                 '<button type="button" class="btn btn-xs btn-default plus-player-input-btn">+</button>' +
                                             '</td>' +
                                        '</tr>');
@@ -46,7 +54,6 @@ function deleteNewPlayerInput(delButton) {
         $(".warning-msg").html("");
 
         delButton.parent().parent().empty().remove();
-        console.log($("table.new-players tr:last-child"));
         $("table.new-players tr:last-child .plus-player-input-btn").show("fast");
 
         playerInputCounter = playerInputCounter - 1;
