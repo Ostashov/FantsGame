@@ -21,3 +21,39 @@ function isValidPlayerName(playerName) {
     var pattern = new RegExp("[^a-zа-яA-ZА-Я0-9 .]");
     return pattern.test(playerName);
 }
+
+function getNames() {
+	var inputs = $("input[name^='name-player-']");
+	var listOfNames = [];
+
+	$.each(inputs, function() {
+		listOfNames.push(this.value);
+	});
+
+	return listOfNames;
+}
+
+function getGenders() {
+	var inputs = $("input[name^='gender-player-']:checked");
+	var listOfGenders = [];
+
+	$.each(inputs, function() {
+		listOfGenders.push(this.value);
+	});
+
+	return listOfGenders;
+}
+
+function checkExistence(list) {
+	var flag = 0;
+
+	if (list.length == 0) flag = 1;
+	
+	$.each(list, function() {
+		if (this == "") {
+			flag = 1;
+		}
+	});
+
+	return flag;
+}

@@ -67,8 +67,23 @@ jQuery(document).ready(function(){
                 tr.removeClass("danger");
             }
         }
-        //alert(radioErrorsCounter);
 
         checkButton();
     }
+
+    $("#add-game-btn").click(function() {
+        var listOfNames = getNames();
+        var listOfGenders = getGenders();
+        var errorFlag = false;
+
+        errorFlag = errorFlag || checkExistence(listOfNames) || checkExistence(listOfGenders);
+
+        if (!errorFlag) {
+            alert("Все хорошо");
+        } else {
+            alert("Что-то не так");
+        }
+    });
+
+
 });
