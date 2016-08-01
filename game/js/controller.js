@@ -76,12 +76,28 @@ jQuery(document).ready(function(){
         var listOfGenders = getGenders();
         var errorFlag = false;
 
-        errorFlag = errorFlag || checkExistence(listOfNames) || checkExistence(listOfGenders);
+        errorFlag = errorFlag || checkExistence(listOfNames) || checkExistence(listOfGenders) || (listOfNames.length !== listOfGenders.length);
 
-        if (!errorFlag) {
-            alert("Все хорошо");
+        if (user_id == 0) {
+            document.location.href = "/panel/signin";
         } else {
-            alert("Что-то не так");
+            if (!errorFlag) {
+                var count = listOfNames.length;
+                var gameJSON = {
+                    "category": $("#task-category-select").val(),
+                    "level": $("#game-level-select").val(),
+                    "players": []
+                };
+                for (var i = 0; i < count; i++) {
+                    gameJSON.players.push({
+                        "name": listOfNames[i],
+                        "gender": listOfGenders[i]
+                    });
+                }
+                createGame(gameJSON);
+            } else {
+                alert("Что-то не так");
+            }
         }
     });
 

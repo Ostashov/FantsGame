@@ -72,11 +72,11 @@
                                         <div class="form-group row">
                                             <div class="col-md-12">
                                                 <label for="taskCategory" class="control-label">Категория:</label>
-                                                <select name="taskCategory" id="">
+                                                <select name="taskCategory" id="task-category-select">
                                                     <option value="1" selected>Обычная</option>
                                                 </select>
                                                 <label for="gameLevel">Сложность:</label>
-                                                <select name="gameLevel" id="">
+                                                <select name="gameLevel" id="game-level-select">
                                                     <option value="1" selected>1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -142,6 +142,9 @@
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <button type="button" id="add-game-btn" class="btn btn-success add-game-btn">Играть</button>
+                                                <div class="ajax-loader" style="display:none;">
+                                                    <img src="/images/ajax-loader.gif" alt="">
+                                                </div>
                                             </div>
                                         </div>
                                     </form>

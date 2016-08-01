@@ -22,3 +22,12 @@ table.new-players td {
 .warning-msg {
 	color: #c7254e;
 }
+
+.ajax-loader {
+	display: inline-block;
+}
+
+.ajax-loader img {
+	width: 20px;
+    height: 20px;
+}

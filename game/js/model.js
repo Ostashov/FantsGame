@@ -23,37 +23,42 @@ function isValidPlayerName(playerName) {
 }
 
 function getNames() {
-	var inputs = $("input[name^='name-player-']");
-	var listOfNames = [];
+    var inputs = $("input[name^='name-player-']");
+    var listOfNames = [];
 
-	$.each(inputs, function() {
-		listOfNames.push(this.value);
-	});
+    $.each(inputs, function() {
+        listOfNames.push(this.value);
+    });
 
-	return listOfNames;
+    return listOfNames;
 }
 
 function getGenders() {
-	var inputs = $("input[name^='gender-player-']:checked");
-	var listOfGenders = [];
+    var inputs = $("input[name^='gender-player-']:checked");
+    var listOfGenders = [];
 
-	$.each(inputs, function() {
-		listOfGenders.push(this.value);
-	});
+    $.each(inputs, function() {
+        listOfGenders.push(this.value);
+    });
 
-	return listOfGenders;
+    return listOfGenders;
 }
 
 function checkExistence(list) {
-	var flag = 0;
+    var flag = 0;
 
-	if (list.length == 0) flag = 1;
-	
-	$.each(list, function() {
-		if (this == "") {
-			flag = 1;
-		}
-	});
+    if (list.length === 0) flag = 1;
 
-	return flag;
+    $.each(list, function() {
+        if (this === "") {
+            flag = 1;
+        }
+    });
+
+    return flag;
+}
+
+function createGame(gameJSON) {
+    $(".ajax-loader").show();
+    //alert(JSON.stringify(gameJSON));
 }
