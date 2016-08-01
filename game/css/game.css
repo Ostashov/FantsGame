@@ -22,14 +22,3 @@ table.new-players td {
 .warning-msg {
 	color: #c7254e;
 }
-
-.not-valid:after {
-	content: "Только буквы, цифры, пробел и точка";
-    display: block;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    padding: 0px 4px;
-    margin-left: 5px;
-    border: 1px solid #c7254e;
-    width: 160px;
-}
