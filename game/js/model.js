@@ -59,6 +59,6 @@ function checkExistence(list) {
 }
 
 function createGame(gameJSON) {
-    $(".ajax-loader").show();
+    changeLoader("loading");
     //alert(JSON.stringify(gameJSON));
 }

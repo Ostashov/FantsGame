@@ -97,3 +97,26 @@ function checkButton() {
         $(".add-game-btn").attr('disabled',false);
     }
 }
+
+function changeLoader(message) {
+    switch (message) {
+        case "loading":
+            $(".ajax-loader").html('<i class="fa fa-spinner fa-pulse fa-fw"></i>').show();
+            break;
+
+        case "error":
+            $(".ajax-loader").html('<i class="fa fa-times" aria-hidden="true"></i>').show();
+            break;
+
+        case "success":
+            $(".ajax-loader").html('<i class="fa fa-check" aria-hidden="true"></i>').show();
+            break;
+
+        case "hide":
+            $(".ajax-loader").html('').hide();
+            break;
+
+        default:
+            break;
+    }
+}
